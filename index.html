@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- nav section -->
+    <nav class="flex justify-between items-center p-3 bg-[#000] text-white relative">
+      <div class="logo text-xl font-semibold">
+        <h1>Design<span class="text-[#e17038]">PS</span></h1>
+      </div>
+      <div class="option">
+        <a href="#" id="home">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="flex gap-4 items-center">
+        <div class="social-links">
+          <i class="fa-brands fa-meta"></i>
+          <i class="fa-solid fa-globe"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="btn">
+          <button class="px-4 py-1 bg-[#f97216] rounded">Log in</button>
+        </div>
+      </div>
+    </nav>
+    <div class="main-section">
+      <!-- Hero section -->
+      <div class="container h-[350px] bg-[#000000] text-white text-center py-[6%]">
+        <h1 class="text-6xl font-semibold mb-4">Welcome to Our <span class="text-[#f97216]">Blog</span></h1>
+        <p class="w-[820px] mx-auto mb-4 text-[#f2f2f2]">Start your blog today and join a community of writer and
+          readers
+          who are passionate about sharing their stories and ideas. We offers everything you nessds to get started ,
+          from
+          helpful tips and tutorials</p>
+        <button>Learn more</button>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      <!-- create blog button -->
+      <div class="create-blog-btn text-center mb-4">
+        <button class="px-4 py-2 bg-[#3c9fbf] font-semibold text-xl rounded-b-md" id="open-bar">Create Blog</button>
+      </div>
+      <!-- Blog section -->
+      <div class="blog-section hide mx-[7%] mb-10">
+        <div class="section py-4 border-b-2 border-black">
+          <a href="#">All</a>
+          <a href="#">Startups</a>
+          <a href="#">Security</a>
+          <a href="#">AI</a>
+          <a href="#">Apps</a>
+          <a href="#">Tech</a>
+        </div>
+        <div class="blog-and-artical w-[100%] max-h-[650px] flex gap-5">
+          <!-- left section -->
+          <div class="left max-h-[100%] w-[70%] p-4 grid grid-cols-3 gap-4 overflow-y-auto">
+          </div>
+          <!-- right section -->
+          <div class="right max-h-[100%] w-[30%] px-20 py-4">
+            <h1 class="text-2xl font-sans font-semibold">Latest Blogs</h1>
+            <div class="notification-Container h-[100%] overflow-y-auto">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer section -->
+      <div class="footer-section w-[100%] h-[300px] bg-[#0f131f] text-white flex justify-evenly py-20">
+        <div class="page-info">
+          <h1>Category</h1>
+          <p>News</p>
+          <p>World</p>
+          <p>Games</p>
+          <p>Reference</p>
+        </div>
+
+        <div class="page-info">
+          <h1>Apples</h1>
+          <p>Web</p>
+          <p>eCommerce</p>
+          <p>Business</p>
+          <p>Entertaiments</p>
+          <p>Portfolio</p>
+        </div>
+
+        <div class="page-info">
+          <h1>Charry</h1>
+          <p>Media</p>
+          <p>Brochure</p>
+          <p>Nonprofit</p>
+          <p>Educational</p>
+          <p>Projects</p>
+        </div>
+
+        <div class="page-info">
+          <h1>Business</h1>
+          <p>Infopreneur</p>
+          <p>Personal</p>
+          <p>Wikipidia</p>
+          <p>Form</p>
+        </div>
+
+        <div class="page-info">
+          <h1>Subscribe for updates</h1>
+          <input type="email" placeholder="Email" class="px-4 outline-none py-2 text-black rounded mr-5">
+          <button class="border-2 py-2 px-5 rounded">Subscribe</button>
+          <p class="w-[300px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, provident.</p>
+        </div>
+      </div>
+      <!-- create blog section -->
+      <div
+        class="create-blog-section hide w-[350px] h-[500px] absolute top-[50%] left-[50%] bg-white rounded p-2   flex flex-col justify-center">
+        <i class="fa-solid fa-xmark flex justify-end text-xl cursor-pointer" id="close-bar"></i>
+        <!-- add image section -->
+        <div class="blog-image border-2 border-gray-400 h-[150px] rounded overflow-hidden relative">
+          <label class="image-lable flex justify-center items-center gap-2 h-[100%]" for="image">
+            <i class="fa-regular fa-image"></i> ADD Image</label>
+          <input type="file" id="image" class="hidden">
+          <img src="" alt="" id="picture" class="h-[100%] w-[100%] object-cover hide">
+          <i class="fa-solid fa-circle-plus hide text-4xl absolute top-12 left-36" id="add-img-icon"></i>
+        </div>
+        <!-- blog title -->
+        <div class="blog-title mt-2">
+          <input type="text" name="" id="title" placeholder="Title..."
+            class="w-[100%] px-3 py-2 border-2 border-gray-400 rounded">
+        </div>
+        <!-- blog summary section -->
+        <div class="blog-writing-section mt-4">
+          <textarea name="" id="content" cols="41" rows="8" placeholder="something write here..."
+            class="bg-[#f2f2f2] p-2"></textarea>
+        </div>
+        <!-- blog save button -->
+        <button class="w-[100px] rounded bg-green-300 py-1" id="saveBtn">Save Blog</button>
+      </div>
+    </div>
+    <!-- full content section -->
+    <div class="blog-full-content hide h-[100%] w-[60%] mx-auto bg-[#f2f2f2] mt-10 p-4">
+      
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
