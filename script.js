@@ -193,5 +193,4 @@ function editblogdata() {
         localStorage.setItem("AllData", JSON.stringify(arrData));
         displayBlogItem()
     })
-    // window.location.reload()
 }
